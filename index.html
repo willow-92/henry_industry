@@ -4,124 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Henry Industry</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #0a3d62;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    nav {
-      background-color: #1e3799;
-      display: flex;
-      justify-content: center;
-    }
-    nav a {
-      color: white;
-      padding: 1rem 2rem;
-      text-decoration: none;
-    }
-    nav a:hover {
-      background-color: #4a69bd;
-    }
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .hero {
-      background-color: #dff9fb;
-      padding: 2rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-    .product-card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      width: 280px;
-    }
-    .contact-button {
-      display: inline-block;
-      background-color: #0a3d62;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 2rem;
-    }
-    footer {
-      text-align: center;
-      background-color: #1e272e;
-      color: white;
-      padding: 1rem;
-      margin-top: 3rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Henry Industry</h1>
-    <p>Your Partner in Packaging Machinery Trade</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="company.html">Company</a>
+      <a href="products.html">Products</a>
+      <a href="exhibition.html">Exhibition</a>
+      <a href="partners.html">Partners</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <!-- <img class="logo" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=facearea&w=400&q=80" alt="Henry Logo"/> -->
+    <h1>HENRY INDUSTRY</h1>
+    <p>Your partner for next-generation packaging solutions.</p>
+    <a class="cta-btn" href="#contact">Get a Quote</a>
   </header>
 
-  <nav>
-    <a href="#about">About Us</a>
-    <a href="#products">Products</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about" class="hero">
-    <h2>About Us</h2>
-    <p>
-      Henry Industry is a global trading company specializing in packaging machines.
-      We provide reliable equipment and technical expertise to help our partners improve efficiency and quality in their packaging processes.
-    </p>
+  <section id="about">
+    <div class="section-title">About Us</div>
+    <div class="section-desc">
+      Henry Industry is a global trading company specializing in state-of-the-art packaging machines.<br/>
+      We provide reliable equipment and technical expertise to help our partners improve efficiency, safety, and quality in their packaging processes.<br/>
+      <b>From mass producers to SMEs — we deliver trust and results.</b>
+    </div>
   </section>
 
   <section id="products">
-    <h2>Our Products</h2>
+    <div class="section-title">Our Products</div>
+    <div class="section-desc">
+      Innovative machinery tailored to your packaging needs.<br/>
+      Discover our top solutions for manufacturing and logistics.
+    </div>
     <div class="products">
       <div class="product-card">
-        <h3>Automatic Wrapping Machine</h3>
-        <p>High-speed and fully automated solution for wrapping applications.</p>
+        <div class="product-icon">🌀</div>
+        <h3>Rotary Pouch Packaging Machine</h3>
+        <p>High-speed automation for mass producers.<br/>Customizable for product variety.</p>
       </div>
       <div class="product-card">
-        <h3>Filling & Sealing Machine</h3>
-        <p>Ideal for liquid, powder, and granular packaging operations.</p>
+        <div class="product-icon">🥤</div>
+        <h3>Spout Pouch Packer</h3>
+        <p>Popular choice for liquid and spouted products.<br/>Efficient and versatile.</p>
       </div>
       <div class="product-card">
-        <h3>Carton Packing Line</h3>
-        <p>Integrated line for packing, sealing, and labeling cartons.</p>
+        <div class="product-icon">📦</div>
+        <h3>Container Fill Seal Machine</h3>
+        <p>Form, fill, and seal for containers of all shapes.<br/>Suitable for dairy and food sectors.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-icon">🪛</div>
+        <h3>Accessories & Parts</h3>
+        <p>High-durability knives and critical spare parts for all our machines.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" style="text-align: center;">
+  <section id="partners">
+    <div class="section-title">Our Partners</div>
+    <div class="section-desc">Trusted by industry leaders worldwide.</div>
+    <div class="partners">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Google-flutter-logo.svg" class="partner-logo" alt="Partner1"/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Unilever.svg" class="partner-logo" alt="Partner2"/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Logo_of_Samsung.svg" class="partner-logo" alt="Partner3"/>
+      <!-- 필요에 따라 로고 교체/추가 -->
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
     <h2>Contact Us</h2>
-    <p>If you are interested in our machines or partnership opportunities, feel free to get in touch!</p>
-    <a href="mailto:hsongkr@naver.com" class="contact-button">Email Us</a>
+    <p>
+      Interested in our machines or partnership opportunities?<br/>
+      Reach out for a customized quote or business inquiry.
+    </p>
+    <a href="mailto:hsongkr@naver.com" class="cta-btn">Email Us</a>
   </section>
 
   <footer>

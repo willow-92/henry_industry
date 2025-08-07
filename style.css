@@ -1,0 +1,186 @@
+
+:root {
+    --primary: #1746a2;
+    --secondary: #ffc436;
+    --bg: #f7fafc;
+    --card: #fff;
+    --text: #212121;
+    --accent: #22a39f;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+header {
+    background: linear-gradient(120deg, var(--primary) 70%, var(--accent));
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem 3rem 2rem;
+    position: relative;
+}
+header .logo {
+    width: 72px; height: 72px;
+    margin-bottom: 1rem;
+    border-radius: 20%;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+    object-fit: cover;
+    background: #fff;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    letter-spacing: -1px;
+    font-weight: 800;
+}
+header p {
+    margin: 1rem auto 2.5rem auto;
+    font-size: 1.25rem;
+    max-width: 420px;
+    opacity: 0.92;
+}
+.cta-btn {
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 1rem 2rem;
+    font-size: 1.15rem;
+    border: none;
+    border-radius: 2rem;
+    font-weight: 700;
+    box-shadow: 0 3px 12px rgba(23,70,162,0.10);
+    text-decoration: none;
+    transition: box-shadow 0.2s;
+    display: inline-block;
+    margin-top: 1.25rem;
+}
+.cta-btn:hover {
+    box-shadow: 0 4px 24px rgba(23,70,162,0.18);
+    background: #ffe38f;
+}
+nav {
+  display: flex;
+  flex-direction: row;      /* 가로로! */
+  justify-content: center;  /* 중앙 정렬 */
+  align-items: center;
+  gap: 2rem;                /* 메뉴 간격 */
+  margin: 0;
+  background: none;
+  padding: 1.5rem 0 0 0;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 1.2rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  background: #ffc436;
+  color: #1746a2;
+}
+
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3.5rem 2rem 2.5rem 2rem;
+}
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+.section-desc {
+    color: #444;
+    opacity: 0.8;
+    margin-bottom: 2.3rem;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 1.7rem;
+}
+.product-card {
+    background: var(--card);
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 20px rgba(23,70,162,0.07);
+    padding: 2rem 1.2rem 1.3rem 1.2rem;
+    text-align: center;
+    transition: box-shadow 0.22s, transform 0.14s;
+}
+.product-card:hover {
+    box-shadow: 0 8px 28px rgba(34,163,159,0.13);
+    transform: translateY(-3px) scale(1.015);
+}
+.product-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+.product-card h3 {
+    margin: 0.5rem 0 0.7rem 0;
+    font-size: 1.18rem;
+    font-weight: 700;
+}
+.product-card p {
+    margin: 0;
+    color: #555;
+    font-size: 1.02rem;
+    opacity: 0.88;
+}
+
+.partners {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+.partner-logo {
+    width: 100px;
+    height: 45px;
+    object-fit: contain;
+    filter: grayscale(1) brightness(0.97);
+    opacity: 0.76;
+    transition: filter 0.19s;
+}
+.partner-logo:hover {
+    filter: grayscale(0.1) brightness(1.04);
+    opacity: 1;
+}
+.contact-section {
+    background: linear-gradient(105deg, #f7fafc 70%, #e9eefa 95%);
+    border-radius: 1.2rem;
+    padding: 2.8rem 1.5rem;
+    text-align: center;
+    margin-top: 2.7rem;
+    box-shadow: 0 2px 22px rgba(23,70,162,0.10);
+}
+.contact-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+.contact-section p {
+    color: #555;
+    margin-bottom: 1.3rem;
+}
+footer {
+    text-align: center;
+    background: #21294a;
+    color: #f1f3f9;
+    padding: 2.2rem 0 1.5rem 0;
+    font-size: 1rem;
+    margin-top: 2.5rem;
+    letter-spacing: 0.05em;
+}
+@media (max-width: 720px) {
+    nav { flex-direction: column; position: static; }
+    header { padding: 3rem 1rem 2rem 1rem; }
+    section { padding: 2rem 0.7rem; }
+}
