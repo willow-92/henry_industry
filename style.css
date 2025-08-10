@@ -60,13 +60,14 @@ header p {
 }
 nav {
   display: flex;
-  flex-direction: row;      /* 가로로! */
-  justify-content: center;  /* 중앙 정렬 */
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;                /* 메뉴 간격 */
+  gap: 2rem;
   margin: 0;
   background: none;
   padding: 1.5rem 0 0 0;
+  flex-wrap: wrap;     /* 줄바꿈 허용 */
 }
 nav a {
   color: #fff;
@@ -180,7 +181,38 @@ footer {
     letter-spacing: 0.05em;
 }
 @media (max-width: 720px) {
-    nav { flex-direction: column; position: static; }
+    nav { flex-direction: row;
+          position: static;
+          flex-wrap: wrap;
+          gap: 0.8rem;
+        
+        }
     header { padding: 3rem 1rem 2rem 1rem; }
     section { padding: 2rem 0.7rem; }
+    nav a {
+        font-size: 1.1rem;    /* 글자 크기 살짝 축소 */
+        padding: 0.5rem 0.9rem;
+    }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.product-tabs {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.product-tabs a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 0.5rem;
+}
+.product-tabs a:hover {
+  background: var(--secondary);
+  color: var(--primary);
 }

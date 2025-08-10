@@ -6,64 +6,105 @@
   <title>Henry Industry - Products</title>
   <link rel="stylesheet" href="style.css" /> <!-- 공통 스타일 분리 추천 -->
 </head>
+
+ <style>
+    html { scroll-behavior: smooth; }
+    .product-tabs { display:flex; gap:1rem; justify-content:center; margin:1rem auto; flex-wrap:wrap; }
+    .product-tabs a { text-decoration:none; padding:0.5rem 1rem; background: var(--primary); color:#fff; border-radius:0.6rem; }
+    .product-tabs a:hover { background: var(--secondary); color: var(--primary); }
+
+    .filter-bar { display:flex; gap:0.5rem; justify-content:center; margin: 1rem auto 1.5rem; flex-wrap:wrap; }
+    .filter-bar button { border:1px solid #ddd; padding:0.5rem 0.9rem; border-radius:999px; background:#fff; cursor:pointer; }
+    .filter-bar button.active { background: var(--secondary); color: var(--primary); border-color: var(--secondary); }
+
+    .gallery { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; }
+    .card { background:#fff; border-radius:0.8rem; box-shadow:0 2px 14px rgba(0,0,0,0.08); overflow:hidden; }
+    .card img { width:100%; height:180px; object-fit:cover; display:block; }
+    .card .cap { padding:0.6rem 0.8rem; font-size:0.95rem; color:#333; word-break: break-all; }
+
+    :target { scroll-margin-top: 72px; }
+  </style>
+</head>
+
 <body>
-  <!-- 공통 내비게이션 -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="company.html">Company</a>
-    <a href="products.html">Products</a>
-    <a href="exhibition.html">Exhibition</a>
-    <a href="partners.html">Partners</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+
+<header>
+    <nav>
+      <a href="index.html">Company</a>
+      <a href="products.html">Products</a>
+      <a href="index.html">Exhibition</a>
+      <a href="#partners">Partners</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<body>
+    <div class="filter-bar">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="packaging">Packaging Machine</button>
+      <button data-filter="factory">Factory Line</button>
+      <button data-filter="accessories">Accessories &amp; Part</button>
+    </div>
+
+       <!-- 갤러리 -->
+    <div id="gallery" class="gallery"></div>
+  </section>
+
+  
+  <section id="factory-line" style="max-width:1100px; margin: 2rem auto; padding: 0 1rem;">
+    <h1>Packing Machine</h1>
+    <p class="section-desc">Turnkey lines and automation components.</p>
+  </section>
+
+  <section id="factory-line" style="max-width:1100px; margin: 2rem auto; padding: 0 1rem;">
+    <h1>Factory Line</h1>
+    <p class="section-desc">Turnkey lines and automation components.</p>
+  </section>
+
+  <section id="accessories" style="max-width:1100px; margin: 2rem auto; padding: 0 1rem;">
+    <h1>Accessories &amp; Part</h1>
+    <p class="section-desc">Critical knives, parts, and consumables.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Henry Industry. All rights reserved.
+  </footer>
+
+  <script>
+    // 이미지 파일 목록 (assets 폴더 바로 아래)
+    const files = Array.from({length: 28}, (_, i) => {
+      const n = i + 1;
+      return `assets/250808-Henry_Industry_Brochure_${n}.png`;
+    });
+
 
   <section style="max-width:900px; margin: 2rem auto;">
-    <h1>Our Products</h1>
-    <ul>
-      <li>
-        <strong>Packaging Machine</strong>
-        <ul>
-          <li>
-            <strong>Rotary Pouch Packaging Machine</strong>
-            <ul>
-              <li>For Mass Producer (리팩머신들)</li>
-              <li>For SME (영팩 머신들)</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Spout Pouch Packer</strong> (유명)
-          </li>
-          <li>
-            <strong>Sachet, Stick Packer</strong> (유명)
-            <ul>
-              <li>Stick packer (티씨싱글)</li>
-              <li>Shape cutting machine (한솔)</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Container Fill Seal Machine</strong>
-            <ul>
-              <li>Form Fill Seal Machine (SSP)</li>
-              <li>Dairy Fill Seal Machine</li>
-              <li>Vacuum & Gas Flushing Tray Sealer</li>
-              <li>Rotary type tray sealer</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Casing & Cartoning Machine</strong>
-          </li>
-          <li>
-            <strong>Flow Wrapper</strong>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <strong>Accessories & Parts</strong>
-        <ul>
-          <li>Knife</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
+    <!-- Packaging Machine -->
+  <h1 id="packaging-machine">Packaging Machine</h1>
+  
+  <ul>
+    <li><strong>Rotary Pouch Packaging Machine</strong>
+      <ul>
+        <li>For Mass Producer</li>
+        <li>For SME</li>
+      </ul>
+    </li>
+    <li><strong>Spout Pouch Packer</strong></li>
+    <li><strong>Sachet, Stick Packer</strong></li>
+    <li><strong>Container Fill Seal Machine</strong></li>
+    <li><strong>Casing & Cartoning Machine</strong></li>
+    <li><strong>Flow Wrapper</strong></li>
+  </ul>
+
+  <!-- Factory Line -->
+  <h1 id="factory-line">Factory Line</h1>
+  <p>Factory line-related products list here...</p>
+
+  <!-- Accessories & Part -->
+  <h1 id="accessories">Accessories & Part</h1>
+  <ul>
+    <li>Knife</li>
+  </ul>
+</section>
 </body>
 </html>
