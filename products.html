@@ -4,107 +4,145 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Henry Industry - Products</title>
-  <link rel="stylesheet" href="style.css" /> <!-- 공통 스타일 분리 추천 -->
-</head>
-
- <style>
+  <link rel="stylesheet" href="style.css" />
+  <style>
     html { scroll-behavior: smooth; }
-    .product-tabs { display:flex; gap:1rem; justify-content:center; margin:1rem auto; flex-wrap:wrap; }
-    .product-tabs a { text-decoration:none; padding:0.5rem 1rem; background: var(--primary); color:#fff; border-radius:0.6rem; }
-    .product-tabs a:hover { background: var(--secondary); color: var(--primary); }
-
-    .filter-bar { display:flex; gap:0.5rem; justify-content:center; margin: 1rem auto 1.5rem; flex-wrap:wrap; }
-    .filter-bar button { border:1px solid #ddd; padding:0.5rem 0.9rem; border-radius:999px; background:#fff; cursor:pointer; }
-    .filter-bar button.active { background: var(--secondary); color: var(--primary); border-color: var(--secondary); }
-
-    .gallery { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; }
-    .card { background:#fff; border-radius:0.8rem; box-shadow:0 2px 14px rgba(0,0,0,0.08); overflow:hidden; }
-    .card img { width:100%; height:180px; object-fit:cover; display:block; }
-    .card .cap { padding:0.6rem 0.8rem; font-size:0.95rem; color:#333; word-break: break-all; }
-
-    :target { scroll-margin-top: 72px; }
+    .gallery { 
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      padding: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gallery figure {
+      margin: 0;
+      text-align: center;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .gallery figcaption {
+      padding: 1rem 0.5rem;
+      font-size: 1rem;
+      color: #333;
+      font-weight: 500;
+    }
+    .product-section {
+      margin-bottom: 3rem;
+    }
+    .product-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
   </style>
 </head>
-
 <body>
 
 <header>
     <nav>
       <a href="index.html">Company</a>
       <a href="products.html">Products</a>
-      <a href="index.html">Exhibition</a>
-      <a href="#partners">Partners</a>
+      <a href="exhibition.html">Exhibition</a>
+      <a href="partners.html">Partners</a>
       <a href="index.html#contact">Contact</a>
     </nav>
 </header>
 
-<body>
-    <div class="filter-bar">
-      <button data-filter="all" class="active">All</button>
-      <button data-filter="packaging">Packaging Machine</button>
-      <button data-filter="factory">Factory Line</button>
-      <button data-filter="accessories">Accessories &amp; Part</button>
+<main style="padding: 2rem 1rem;">
+
+  <section class="product-section" id="rotary-pouch-fill-seal">
+    <h2>Rotary Pouch Fill Seal</h2>
+    <div class="gallery">
+      <figure><img src="assets/1. Rotary Pouch Fill Seal/250808-Henry Industry Brochure_2.png" alt="Rotary Pouch Fill Seal Machine"><figcaption>Rotary Pouch Fill Seal Machine</figcaption></figure>
+      <figure><img src="assets/1. Rotary Pouch Fill Seal/250808-Henry Industry Brochure_3.png" alt="Rotary Pouch Fill Seal Machine"><figcaption>Rotary Pouch Fill Seal Machine</figcaption></figure>
+      <figure><img src="assets/1. Rotary Pouch Fill Seal/250808-Henry Industry Brochure_4.png" alt="Rotary Pouch Fill Seal Machine"><figcaption>Rotary Pouch Fill Seal Machine</figcaption></figure>
+      <figure><img src="assets/1. Rotary Pouch Fill Seal/250808-Henry Industry Brochure_5.png" alt="Rotary Pouch Fill Seal Machine"><figcaption>Rotary Pouch Fill Seal Machine</figcaption></figure>
+      <figure><img src="assets/1. Rotary Pouch Fill Seal/250808-Henry Industry Brochure_6.png" alt="Rotary Pouch Fill Seal Machine"><figcaption>Rotary Pouch Fill Seal Machine</figcaption></figure>
+      <figure><img src="assets/1. Rotary Pouch Fill Seal/250808-Henry Industry Brochure_7.png" alt="Rotary Pouch Fill Seal Machine"><figcaption>Rotary Pouch Fill Seal Machine</figcaption></figure>
+      <figure><img src="assets/1. Rotary Pouch Fill Seal/250808-Henry Industry Brochure_8.png" alt="Rotary Pouch Fill Seal Machine"><figcaption>Rotary Pouch Fill Seal Machine</figcaption></figure>
+      <figure><img src="assets/1. Rotary Pouch Fill Seal/250808-Henry Industry Brochure_9.png" alt="Rotary Pouch Fill Seal Machine"><figcaption>Rotary Pouch Fill Seal Machine</figcaption></figure>
+      <figure><img src="assets/1. Rotary Pouch Fill Seal/250808-Henry Industry Brochure_10.png" alt="Rotary Pouch Fill Seal Machine"><figcaption>Rotary Pouch Fill Seal Machine</figcaption></figure>
     </div>
-
-       <!-- 갤러리 -->
-    <div id="gallery" class="gallery"></div>
   </section>
 
-  
-  <section id="factory-line" style="max-width:1100px; margin: 2rem auto; padding: 0 1rem;">
-    <h1>Packing Machine</h1>
-    <p class="section-desc">Turnkey lines and automation components.</p>
+  <section class="product-section" id="spout-pouch-fill-seal">
+    <h2>Spout Pouch Fill Seal</h2>
+    <div class="gallery">
+      <figure><img src="assets/2. Spout Pouch Fill Seal/250808-Henry Industry Brochure_11.png" alt="Spout Pouch Fill Seal Machine"><figcaption>Spout Pouch Fill Seal Machine</figcaption></figure>
+    </div>
   </section>
 
-  <section id="factory-line" style="max-width:1100px; margin: 2rem auto; padding: 0 1rem;">
-    <h1>Factory Line</h1>
-    <p class="section-desc">Turnkey lines and automation components.</p>
+  <section class="product-section" id="sachet-stick-packer">
+    <h2>Sachet & Stick Packer</h2>
+    <div class="gallery">
+      <figure><img src="assets/3. Sachet .Stick Packer/250808-Henry Industry Brochure_12.png" alt="Sachet Stick Packer"><figcaption>Sachet & Stick Packer Machine</figcaption></figure>
+      <figure><img src="assets/3. Sachet .Stick Packer/250808-Henry Industry Brochure_13.png" alt="Sachet Stick Packer"><figcaption>Sachet & Stick Packer Machine</figcaption></figure>
+      <figure><img src="assets/3. Sachet .Stick Packer/250808-Henry Industry Brochure_14.png" alt="Sachet Stick Packer"><figcaption>Sachet & Stick Packer Machine</figcaption></figure>
+      <figure><img src="assets/3. Sachet .Stick Packer/250808-Henry Industry Brochure_15.png" alt="Sachet Stick Packer"><figcaption>Sachet & Stick Packer Machine</figcaption></figure>
+      <figure><img src="assets/3. Sachet .Stick Packer/250808-Henry Industry Brochure_16.png" alt="Sachet Stick Packer"><figcaption>Sachet & Stick Packer Machine</figcaption></figure>
+    </div>
   </section>
 
-  <section id="accessories" style="max-width:1100px; margin: 2rem auto; padding: 0 1rem;">
-    <h1>Accessories &amp; Part</h1>
-    <p class="section-desc">Critical knives, parts, and consumables.</p>
+  <section class="product-section" id="container-fill-seal">
+    <h2>Container Fill Seal</h2>
+    <div class="gallery">
+      <figure><img src="assets/4. Container Fill Seal/250808-Henry Industry Brochure_18.png" alt="Container Fill Seal Machine"><figcaption>Container Fill Seal Machine</figcaption></figure>
+      <figure><img src="assets/4. Container Fill Seal/250808-Henry Industry Brochure_19.png" alt="Container Fill Seal Machine"><figcaption>Container Fill Seal Machine</figcaption></figure>
+      <figure><img src="assets/4. Container Fill Seal/250808-Henry Industry Brochure_20.png" alt="Container Fill Seal Machine"><figcaption>Container Fill Seal Machine</figcaption></figure>
+    </div>
   </section>
 
-  <footer>
-    &copy; 2025 Henry Industry. All rights reserved.
-  </footer>
+  <section class="product-section" id="form-fill-seal">
+    <h2>Form Fill Seal</h2>
+    <div class="gallery">
+      <figure><img src="assets/5. Form Fill Seal/250808-Henry Industry Brochure_17.png" alt="Form Fill Seal Machine"><figcaption>Form Fill Seal Machine</figcaption></figure>
+    </div>
+  </section>
 
-  <script>
-    // 이미지 파일 목록 (assets 폴더 바로 아래)
-    const files = Array.from({length: 28}, (_, i) => {
-      const n = i + 1;
-      return `assets/250808-Henry_Industry_Brochure_${n}.png`;
-    });
+  <section class="product-section" id="vacuum-thermo-forming">
+    <h2>Vacuum Thermo-forming</h2>
+    <div class="gallery">
+      <figure><img src="assets/5. Vacuum Thermo-forming/250808-Henry Industry Brochure_21.png" alt="Vacuum Thermo-forming Machine"><figcaption>Vacuum Thermo-forming Machine</figcaption></figure>
+      <figure><img src="assets/5. Vacuum Thermo-forming/250808-Henry Industry Brochure_22.png" alt="Vacuum Thermo-forming Machine"><figcaption>Vacuum Thermo-forming Machine</figcaption></figure>
+    </div>
+  </section>
 
+  <section class="product-section" id="flow-wrapper">
+    <h2>Flow Wrapper</h2>
+    <div class="gallery">
+      <figure><img src="assets/6. Flow Wrapper/250808-Henry Industry Brochure_23.png" alt="Flow Wrapper"><figcaption>Flow Wrapper Machine</figcaption></figure>
+      <figure><img src="assets/6. Flow Wrapper/250808-Henry Industry Brochure_24.png" alt="Flow Wrapper"><figcaption>Flow Wrapper Machine</figcaption></figure>
+    </div>
+  </section>
 
-  <section style="max-width:900px; margin: 2rem auto;">
-    <!-- Packaging Machine -->
-  <h1 id="packaging-machine">Packaging Machine</h1>
-  
-  <ul>
-    <li><strong>Rotary Pouch Packaging Machine</strong>
-      <ul>
-        <li>For Mass Producer</li>
-        <li>For SME</li>
-      </ul>
-    </li>
-    <li><strong>Spout Pouch Packer</strong></li>
-    <li><strong>Sachet, Stick Packer</strong></li>
-    <li><strong>Container Fill Seal Machine</strong></li>
-    <li><strong>Casing & Cartoning Machine</strong></li>
-    <li><strong>Flow Wrapper</strong></li>
-  </ul>
+  <section class="product-section" id="caser-cartoner">
+    <h2>Caser & Cartoner</h2>
+    <div class="gallery">
+      <figure><img src="assets/7. Caser . Cartoner/250808-Henry Industry Brochure_25.png" alt="Caser Cartoner"><figcaption>Caser & Cartoner Machine</figcaption></figure>
+      <figure><img src="assets/7. Caser . Cartoner/250808-Henry Industry Brochure_26.png" alt="Caser Cartoner"><figcaption>Caser & Cartoner Machine</figcaption></figure>
+    </div>
+  </section>
 
-  <!-- Factory Line -->
-  <h1 id="factory-line">Factory Line</h1>
-  <p>Factory line-related products list here...</p>
+  <section class="product-section" id="accessories-knives">
+    <h2>Accessories & Knives</h2>
+    <div class="gallery">
+      <figure><img src="assets/8. Accessories . Knives/250808-Henry Industry Brochure_27.png" alt="Accessories Knives"><figcaption>Accessory & Knife</figcaption></figure>
+      <figure><img src="assets/8. Accessories . Knives/250808-Henry Industry Brochure_28.png" alt="Accessories Knives"><figcaption>Accessory & Knife</figcaption></figure>
+    </div>
+  </section>
 
-  <!-- Accessories & Part -->
-  <h1 id="accessories">Accessories & Part</h1>
-  <ul>
-    <li>Knife</li>
-  </ul>
-</section>
+</main>
+
+<footer>
+  &copy; 2025 Henry Industry. All rights reserved.
+</footer>
+
 </body>
 </html>
