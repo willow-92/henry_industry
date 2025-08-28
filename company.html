@@ -84,5 +84,31 @@
   <footer>
     &copy; 2025 Henry Industry. All rights reserved.
   </footer>
+
+<button onclick="topFunction()" id="goToTopBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("goToTopBtn");
+var scrollTimeout;
+
+window.onscroll = function() {
+  clearTimeout(scrollTimeout);
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+  scrollTimeout = setTimeout(function(){
+    mybutton.style.display = "none";
+  }, 1000);
+};
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
 </body>
 </html>

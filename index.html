@@ -15,9 +15,11 @@
       <a href="index.html">Partners</a>
       <a href="#contact">Contact</a>
     </nav>
-    <h1>HENRY INDUSTRY</h1>
-    <p>Your partner for next-generation packaging solutions.</p>
-    <a class="cta-btn" href="#contact">Get a Quote</a>
+    <div class="hero-content">
+      <h1>HENRY INDUSTRY</h1>
+      <p>Your partner for next-generation packaging solutions.</p>
+      <a class="cta-btn" href="#contact">Get a Quote</a>
+    </div>
   </header>
 
   <section id="about">
@@ -136,5 +138,31 @@
     <img class="logo" src="assets/Logo-Henry-1-removebg.png" alt="Henry Logo"/>
     <span>&copy; 2025 Henry Industry. All rights reserved.</span>
   </footer>
+
+<button onclick="topFunction()" id="goToTopBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("goToTopBtn");
+var scrollTimeout;
+
+window.onscroll = function() {
+  clearTimeout(scrollTimeout);
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+  scrollTimeout = setTimeout(function(){
+    mybutton.style.display = "none";
+  }, 1000);
+};
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
 </body>
 </html>

@@ -5,43 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Henry Industry - Products</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    html { scroll-behavior: smooth; }
-    .gallery { 
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
-      padding: 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .gallery figure {
-      margin: 0;
-      text-align: center;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .gallery figcaption {
-      padding: 1rem 0.5rem;
-      font-size: 1rem;
-      color: #333;
-      font-weight: 500;
-    }
-    .product-section {
-      margin-bottom: 3rem;
-    }
-    .product-section h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: var(--primary);
-    }
-  </style>
+  
 </head>
 <body>
 
@@ -55,7 +19,7 @@
     </nav>
 </header>
 
-<main style="padding: 2rem 1rem;">
+<main>
 
   <div class="product-tabs">
     <a href="#rotary-pouch-fill-seal">Rotary Pouch Fill Seal</a>
@@ -155,6 +119,31 @@
 <footer>
   &copy; 2025 Henry Industry. All rights reserved.
 </footer>
+
+<button onclick="topFunction()" id="goToTopBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("goToTopBtn");
+var scrollTimeout;
+
+window.onscroll = function() {
+  clearTimeout(scrollTimeout);
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+  scrollTimeout = setTimeout(function(){
+    mybutton.style.display = "none";
+  }, 1000);
+};
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 
 </body>
 </html>

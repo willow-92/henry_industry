@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Henry Industry - Partners</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Company</a>
+      <a href="products.html">Products</a>
+      <a href="exhibition.html">Exhibition</a>
+      <a href="partners.html">Partners</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="hero-content">
+      <h1>HENRY INDUSTRY</h1>
+      <p>Your partner for next-generation packaging solutions.</p>
+      <a class="cta-btn" href="index.html#contact">Get a Quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="partners-list">
+      <h2 style="text-align: center; font-size: 2.5rem; color: var(--primary); margin-bottom: 2rem;">Our Valued Partners</h2>
+      <div class="partners-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+        <div class="partner-card" style="background: var(--card); border-radius: 1.5rem; box-shadow: 0 2px 20px rgba(23,70,162,0.07); padding: 2rem; text-align: center;">
+          <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 0.5rem;"><img src="assets/flags/my.png" alt="Malaysia Flag" style="width: 32px; height: auto; vertical-align: middle; margin-right: 8px;"> Malaysia</h3>
+          <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Fillpack technology</p>
+          <p style="font-size: 1rem; margin-bottom: 0.5rem;">Phone: (+60) 12-267-2556</p>
+          <p style="font-size: 1rem;"><a href="mailto:frederick@fillpack.com.my" style="color: var(--accent); text-decoration: none;">frederick@fillpack.com.my</a></p>
+        </div>
+        <div class="partner-card" style="background: var(--card); border-radius: 1.5rem; box-shadow: 0 2px 20px rgba(23,70,162,0.07); padding: 2rem; text-align: center;">
+          <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 0.5rem;"><img src="assets/flags/ph.png" alt="Philippines Flag" style="width: 32px; height: auto; vertical-align: middle; margin-right: 8px;"> Philippines</h3>
+          <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Henry Industry PH</p>
+          <p style="font-size: 1rem; margin-bottom: 0.5rem;">Phone: (+63) 936 089 3516</p>
+          <p style="font-size: 1rem;"><a href="mailto:Zaidajean02@gmail.com" style="color: var(--accent); text-decoration: none;">Zaidajean02@gmail.com</a></p>
+        </div>
+        <div class="partner-card" style="background: var(--card); border-radius: 1.5rem; box-shadow: 0 2px 20px rgba(23,70,162,0.07); padding: 2rem; text-align: center;">
+          <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 0.5rem;"><img src="assets/flags/th.png" alt="Thailand Flag" style="width: 32px; height: auto; vertical-align: middle; margin-right: 8px;"> Thailand</h3>
+          <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Wasser Tech Group</p>
+          <p style="font-size: 1rem; margin-bottom: 0.5rem;">Phone: (+66) 8-0555-1549</p>
+          <p style="font-size: 1rem;"><a href="mailto:mesayon.th@gmail.com" style="color: var(--accent); text-decoration: none;">mesayon.th@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img class="logo" src="assets/Logo-Henry-1-removebg.png" alt="Henry Logo"/>
+    <span>&copy; 2025 Henry Industry. All rights reserved.</span>
+  </footer>
+
+<button onclick="topFunction()" id="goToTopBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("goToTopBtn");
+var scrollTimeout;
+
+window.onscroll = function() {
+  clearTimeout(scrollTimeout);
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+  scrollTimeout = setTimeout(function(){
+    mybutton.style.display = "none";
+  }, 1000);
+};
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

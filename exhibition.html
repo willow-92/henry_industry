@@ -5,41 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Henry Industry - Exhibition</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Add any specific styles for exhibition page here */
-    .exhibition-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      padding: 1rem;
-      max-width: 1200px;
-      margin: 2rem auto;
-    }
-    .exhibition-item {
-      background: var(--card);
-      border-radius: 1.5rem;
-      box-shadow: 0 2px 20px rgba(23,70,162,0.07);
-      overflow: hidden;
-      text-align: center;
-    }
-    .exhibition-item img {
-      width: 100%;
-      height: 100px; /* Changed to 100px */
-      object-fit: contain;
-      display: block;
-    }
-    }
-    .exhibition-item h3 {
-      margin: 1rem 0.5rem 0.5rem 0.5rem;
-      font-size: 1.2rem;
-      color: var(--primary);
-    }
-    .exhibition-item p {
-      margin: 0 0.5rem 1rem 0.5rem;
-      font-size: 0.95rem;
-      color: #555;
-    }
-  </style>
+  
 </head>
 <body>
 
@@ -53,7 +19,7 @@
     </nav>
 </header>
 
-<main style="padding: 2rem 1rem;">
+<main>
   <section class="exhibition-section">
     <h2 style="text-align: center; font-size: 2.5rem; color: var(--primary); margin-bottom: 2rem;">Our Exhibitions</h2>
 
@@ -208,6 +174,31 @@
 <footer>
   &copy; 2025 Henry Industry. All rights reserved.
 </footer>
+
+<button onclick="topFunction()" id="goToTopBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("goToTopBtn");
+var scrollTimeout;
+
+window.onscroll = function() {
+  clearTimeout(scrollTimeout);
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+  scrollTimeout = setTimeout(function(){
+    mybutton.style.display = "none";
+  }, 1000);
+};
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 
 </body>
 </html>
