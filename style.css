@@ -268,7 +268,7 @@ html {
   text-decoration: none;
   padding: 0.7rem 0.8rem; /* More horizontal padding for pill shape */
   background: var(--bg);
-  color: var(--secondary);
+  color: var(--text);
   border-radius: 1.5rem; /* More rounded corners for pill shape */
   text-align: center;
   font-size: 0.9rem; /* Slightly larger font */
